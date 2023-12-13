@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,126 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DeltaNitro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_delta" translatesAutoresizingMaskIntoConstraints="NO" id="5km-eu-HpJ">
+                                <rect key="frame" x="20" y="59" width="165" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="4PV-B5-VVW"/>
+                                    <constraint firstAttribute="width" constant="165" id="8QJ-TP-min"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Хотели купить NITRO?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdg-pe-HSv">
+                                <rect key="frame" x="16" y="192" width="280" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Lzp-ul-sEJ"/>
+                                    <constraint firstAttribute="width" constant="280" id="zIJ-fK-VYN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="30"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xs-9a-Pmw">
+                                <rect key="frame" x="248" y="79" width="100" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="r3R-NY-POw"/>
+                                    <constraint firstAttribute="width" constant="100" id="wBH-NQ-gyv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="помощь" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="helpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QEP-bK-U1e"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Открой для себя низкие" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wf-cC-JAX">
+                                <rect key="frame" x="20" y="237" width="211" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="R36-eZ-n4l"/>
+                                    <constraint firstAttribute="width" constant="211" id="hgy-Xo-yxy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="цены и эксклюзивные" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Nc-gV-rYC">
+                                <rect key="frame" x="20" y="259" width="195" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="6C9-ha-Ppj"/>
+                                    <constraint firstAttribute="height" constant="24" id="nJd-c7-9Kl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="бонусы на Discord Nitro!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOH-uT-FB5">
+                                <rect key="frame" x="20" y="283" width="209" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="21k-WD-DCS"/>
+                                    <constraint firstAttribute="width" constant="209" id="JzJ-eC-CrQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discord-u2014-nitro-discord-nitro-toy-helmet-clothing-apparel-transparent-png-2623470 (1) 2" translatesAutoresizingMaskIntoConstraints="NO" id="gwZ-31-8Cy">
+                                <rect key="frame" x="35" y="315" width="323" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="6hU-q5-Y1H"/>
+                                    <constraint firstAttribute="height" constant="320" id="Blu-y1-7A9"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6K-BJ-Oz7">
+                                <rect key="frame" x="142" y="643" width="109" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="605-DC-aPk"/>
+                                    <constraint firstAttribute="height" constant="50" id="Q62-Fo-0dz"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="купить" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.58431375029999999" green="0.40392160420000001" blue="0.72941178080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buyBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0IF-Xb-MAd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.25538364050000001" green="0.2096745968" blue="0.3498674631" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7Nc-gV-rYC" firstAttribute="top" secondItem="xdg-pe-HSv" secondAttribute="bottom" constant="30" id="2VW-nV-1tl"/>
+                            <constraint firstItem="rOH-uT-FB5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4Rh-2J-h4p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V6K-BJ-Oz7" secondAttribute="trailing" constant="142" id="Cxl-2u-e8B"/>
+                            <constraint firstItem="5km-eu-HpJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GO7-GP-LMO"/>
+                            <constraint firstItem="gwZ-31-8Cy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="Gq9-8b-x0x"/>
+                            <constraint firstItem="V6K-BJ-Oz7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="HXP-Qx-x5D"/>
+                            <constraint firstItem="xdg-pe-HSv" firstAttribute="top" secondItem="5km-eu-HpJ" secondAttribute="bottom" constant="8" symbolic="YES" id="MQg-Zr-sZu"/>
+                            <constraint firstItem="4xs-9a-Pmw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="N4V-OA-7VD"/>
+                            <constraint firstItem="7Nc-gV-rYC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PGC-aq-ona"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gwZ-31-8Cy" secondAttribute="trailing" constant="35" id="PuM-VU-xOP"/>
+                            <constraint firstItem="gwZ-31-8Cy" firstAttribute="top" secondItem="rOH-uT-FB5" secondAttribute="bottom" constant="8" symbolic="YES" id="STp-wd-l4H"/>
+                            <constraint firstItem="rOH-uT-FB5" firstAttribute="top" secondItem="7Nc-gV-rYC" secondAttribute="bottom" id="Sbw-sC-XIL"/>
+                            <constraint firstItem="xdg-pe-HSv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SlI-wl-6ny"/>
+                            <constraint firstItem="V6K-BJ-Oz7" firstAttribute="top" secondItem="gwZ-31-8Cy" secondAttribute="bottom" constant="8" symbolic="YES" id="UJd-4a-BN6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4xs-9a-Pmw" secondAttribute="trailing" constant="45" id="jy4-IU-tlC"/>
+                            <constraint firstItem="9Wf-cC-JAX" firstAttribute="top" secondItem="xdg-pe-HSv" secondAttribute="bottom" constant="8" symbolic="YES" id="sgO-6R-kmH"/>
+                            <constraint firstItem="9Wf-cC-JAX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="t7L-G4-xzg"/>
+                            <constraint firstItem="5km-eu-HpJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wH1-eH-das"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="129.76744186046511" y="1.2875536480686696"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="discord-u2014-nitro-discord-nitro-toy-helmet-clothing-apparel-transparent-png-2623470 (1) 2" width="298" height="232"/>
+        <image name="logo_delta" width="994" height="994"/>
+    </resources>
 </document>
